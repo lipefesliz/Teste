@@ -1,0 +1,9 @@
+{
+    "url": "https://raw.githubusercontent.com/lipefesliz/Teste/master/poc.yaml",
+    "urls": [
+        {
+            "url": "https://raw.githubusercontent.com/lipefesliz/Teste/master/poc.yaml",
+            "name": "Foo"
+        }
+    ]
+}
