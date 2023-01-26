@@ -16,10 +16,11 @@ consumes:
   - application/json
 components:
   securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
+    Bearer:
+      type: apiKey
+      description: 'JWT Authorization header using the Bearer scheme.'
+      name: Authorization
+      in: header
 security:
   - basicAuth: []
 paths:
@@ -33,21 +34,6 @@ paths:
       operationId: findUsers
       summary: Finds all users
   '/api/users/{id}/properties':
-    delete:
-      parameters:
-        - description: Id value to filter by
-          format: int64
-          in: path
-          name: id
-          required: true
-          type: integer
-      responses:
-        '200':
-          description: No response was specified
-      tags:
-        - users
-      operationId: deleteUserById
-      summary: Deletes a user by id
     get:
       parameters:
         - description: Id value to filter by
@@ -63,37 +49,6 @@ paths:
         - users
       operationId: findUsersById
       summary: Finds users by id
-    post:
-      parameters:
-        - description: Id value to filter by
-          in: path
-          name: id
-          required: true
-          type: string
-      responses:
-        '200':
-          description: No response was specified
-      tags:
-        - users
-      description: 'POST cannot be used to add computers, mobile devices, peripherals, vpp assignments to a user.'
-      operationId: createUserById
-      summary: Creates a new user by id
-    put:
-      parameters:
-        - description: Id value to filter by
-          format: int64
-          in: path
-          name: id
-          required: true
-          type: integer
-      responses:
-        '200':
-          description: No response was specified
-      tags:
-        - users
-      description: 'PUT cannot be used to add computers, mobile devices, peripherals, vpp assignments to a user.'
-      operationId: updateUserById
-      summary: Updates an existing user by id
   '/users/name/{name}':
     get:
       parameters:
