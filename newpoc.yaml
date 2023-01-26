@@ -23,8 +23,7 @@ components:
       in: header
 security:
   #- basicAuth: []
-  0:
-    Bearer: []
+  Bearer: []
 paths:
   /users:
     get:
@@ -84,9 +83,9 @@ definitions:
         type: integer
       name:
         type: string
-securityDefinitions:
-  basicAuth:
-    type: basic
+#securityDefinitions:
+#  basicAuth:
+#    type: basic
 tags:
   - description: Operations on users
     name: users
