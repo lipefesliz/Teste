@@ -22,7 +22,9 @@ components:
       name: Authorization
       in: header
 security:
-  - basicAuth: []
+  #- basicAuth: []
+  0:
+    Bearer: []
 paths:
   /users:
     get:
