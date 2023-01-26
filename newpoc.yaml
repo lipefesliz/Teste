@@ -83,9 +83,13 @@ definitions:
         type: integer
       name:
         type: string
-#securityDefinitions:
-#  basicAuth:
-#    type: basic
+securityDefinitions:
+  BasicAuth:
+    type: basic
+  ApiKeyAuth:
+    type: apiKey
+    in: header
+    name: X-API-Key
 tags:
   - description: Operations on users
     name: users
