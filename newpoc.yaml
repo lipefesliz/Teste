@@ -17,7 +17,7 @@ consumes:
 security:
   - basicAuth: []
 paths:
-  /users:
+  /accounts:
     get:
       responses:
         '200':
