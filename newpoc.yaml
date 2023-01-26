@@ -6,7 +6,6 @@ info:
 
   version: production
 basePath: /JSSResource/
-produces:
   - application/xml
   - application/json
   - application/xml
