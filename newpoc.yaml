@@ -4,8 +4,8 @@ info:
   description: No response was specified
 
   version: production
-host: 360.nddprint.com
-basePath: /odata
+host: ragnarok-portal.brazilsouth.cloudapp.azure.com
+#basePath: /
 schemes:
   - https
 produces:
@@ -17,7 +17,7 @@ consumes:
 security:
   - basicAuth: []
 paths:
-  /users?language=pt-BR&$skip=0&$top=100&$orderby=fullName&$count=true:
+  /users:
     get:
       responses:
         '200':
