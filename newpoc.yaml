@@ -1,4 +1,5 @@
-swagger: '2.0'
+#swagger: '2.0'
+openapi: '3.0.1'
 info:
   title: Classic API Resource Documentation
   description: No response was specified
@@ -34,7 +35,7 @@ paths:
         - users
       operationId: findUsers
       summary: Finds all users
-  '/api/users/{id}/properties':
+  /api/users/{id}/properties:
     get:
       parameters:
         - description: Id value to filter by
