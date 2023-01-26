@@ -4,7 +4,10 @@ info:
   description: No response was specified
 
   version: production
-basePath: https://360.nddprint.com/odata/
+host: 360.nddprint.com
+basePath: /odata
+schemes:
+  - https
 produces:
   - application/xml
   - application/json
